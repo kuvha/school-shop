@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta  charset="UTF-8">
+  
+  <title>kuvhanganani</title>
+  <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+  <style>
+  
+  :root {
+  
+  --bg: #FAF9F6;
+  --text: #1A1A1A;
+  --accent: #B8962E;
+  --accent-hover: #A67C00;
+  --card: #FFFFFF;
+  --border: #E8E0C8;
+  
+  --white: #FFFFFF;
+    
+}
+  
+  
+  *{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    color: var(--text);
+    text-align:center;
+  }
+  body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+  }
+  .main-container{
+    width:90%;
+    max-width:800px;
+    background: var(--bg);
+    padding:15px;
+    box-shadow:0px 0px 16px var(--accent);
+  }
+  .main-card ,.projects-card,.projects-container div,
+  .about-card,.skills-card
+  {
+    background: var(--card);
+    border:4px solid var(--border);
+    border-radius:8px;
+  }
+  .main-card{
+    flex:3;
+    padding:15px;
+    
+  }
+  .img-card{
+    flex:2;
+  }
+  main{
+    display:flex;
+    grid-area:area1;
+    gap:10px;
+    margin-bottom:10px;
+    
+  }
+  .shop{
+    font-size:large;
+    font-weight:bolder;
+    
+  }
+  
+  button{
+    background-color: var(--accent);
+    border : 2px solid var(--borde);
+    padding: 4px 8px;
+    font-weight:bold;
+    border-radius:8px;
+  }
+  button:hover{
+    background-color: var(--accent-hover);
+  }
+  p{
+    margin-bottom:10px;
+  }
+  .main-pic{
+    width:100%;
+    max- width:240px;
+    height:240px;
+    object-fit:cover;
+    background: var(--card);
+    border:4px solid var(--border);
+    border-radius:8px;
+  }
+  
+  .projects-card{
+    padding:5px;
+    margin-bottom:10px;
+    grid-area:area3;
+  }
+  
+  .projects-container{
+    display:flex;
+    gap:5px;
+    margin-top:10px;
+    min-height:150px;
+    
+  }
+  .projects-container div{
+    flex:1;
+    padding:5px;
+  }
+  .about-skills-container{
+    display:flex;
+    gap:5px;
+    min-height:200px;
+    justify-content:center;
+    grid-area:area2;
+    
+  }
+  .about-skills-container button{
+    align-self:center;
+    margin-top:5px;
+  }
+  
+   .about-skills-container p{
+    text-align:start;
+  }
+  
+  .skills-card{
+    flex:2;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+  }
+  ul{
+   list-style:none;
+   padding:0; 
+   margin:0;
+  }
+    .about-card{
+    flex:3;
+    flex-direction:column;
+    display:flex;
+    justify-content:center;
+      padding:10px;
+    
+  }
+  footer{
+    margin-top:15px;
+    display:flex;
+    justify-content:center;
+    gap:5px;
+    grid-area:footer;
+  }
+  
+  @media (max-width:800px){
+    
+    .main-container{
+      display:grid;
+      grid-template-column:1fr;
+      width:98%;
+      grid-template-areas:
+     "area1"
+     "area2"
+     "area3"
+      "footer"
+      ;
+    }
+    .about-skills-container{
+      display:grid;
+      grid-template-column:1fr;
+      gap:10px;
+      margin-bottom:10px;
+    }
+    .skills-card{
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+    
+  }
+  
+  
+  
+  </style>
+  
+</head>
+<body>
+  
+  <div class="main-container"> 
+ <main> 
+   <div class="main-card">
+  <h1>Kuvhanganani Nembilwi</h1>
+  <p>Aspring front end developer</p>
+  <p>|HTML|CSS|Javascript|</p>
+  <button>DownloadCV</button>
+  <button>ContactMe</button>
+     </div>
+   <div class="img-card">
+     <img class="main-pic" src="main-picture.jpg">
+   </div>  
+ </main>
+  
+    <section class="projects-card">
+  <h2>Projects</h2>
+      <hr>
+      <div class="projects-container"> 
+        
+        
+  <div onclick="window.open('www.kuvha.com')" class="shop" style="
+    background-image:url('shop-pic.jpg');
+    background-position:center;
+    background-size:cover;
+    ">schoolshop</div>
+          
+  <div>MrSavingPlan.App</div>
+  <div> projects on github</div>
+   </div>
+     </section>
+  
+  <section class="about-skills-container">
+    <div class="about-card">
+    <h3>About me</h3>
+      <p>
+ I'm a Frontend Developer focused on building fast, 
+ clean, and responsive websites with HTML, CSS, and 
+ JavaScript.
+</p>
+      <p>  
+I care about clean layouts, smooth user  experience,
+  and websites that look perfect on both mobile and 
+  desktop.
+</p>
+        <p> 
+Currently, I'm learning React and backend development,
+   and building real projects to turn what I learn 
+     into real skills.
+</p>
+        <p> 
+I'm looking for an internship or junior role 
+  where I can build real products, learn from a team,
+        and grow as a developer.
+
+
+      </p>
+    <p></p>
+    <button>DownloadCV</button>
+    </div>
+   
+  
+  
+    <div class="skills-card">  
+      <h3>Skills</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+      <li>Localstorage & JSON</li>
+      <li>DOM-manipulation</li>
+      <li>Responsive design</li>
+    </ul> 
+      
+    </div>
+    
+  </section>
+  
+  <footer>
+    <p>@ 2026</p> 
+    <p>github</p>
+    <p>whatsapp</p>
+    
+  </footer>
+  
+    </div>
+</body>
+</html>
