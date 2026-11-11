@@ -16,7 +16,9 @@ function  slipSet(){
   
   
     </div>
-  <button>process payment</button>
+  <button onclick="
+  alert('thank you! `) ;
+" >process payment</button>
     `;
     
     document.querySelector(".main").innerHTML= pageHTML;
