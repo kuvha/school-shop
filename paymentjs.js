@@ -45,7 +45,7 @@ function itemStats(){
       <p>total items</p><p class="quantity">${quantity}</p>
     
     
-    <p>name </p><p>quantity</p> `+ html; 
+    <h3>name </h3><h3>quantity</h3> `+ html; 
 }
 
 
