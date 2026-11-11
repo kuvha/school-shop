@@ -1,278 +1,162 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
-  <meta  charset="UTF-8">
-  
-  <title>kuvhanganani</title>
-  <meta name="viewport" content="width=device-width,
-    initial-scale=1.0">
+  <meta content="text/html; charset=UTF-8">
+   <meta name="viewport"
+    content="width=device-width,initial-scale=1.0"> 
+  <script src="paymentjs.js"></script>
+  <link rel="stylesheet" href="layout.css"/>
+  <title>SchoolStore</title>
   <style>
   
-  :root {
-  
-  --bg: #FAF9F6;
-  --text: #1A1A1A;
-  --accent: #B8962E;
-  --accent-hover: #A67C00;
-  --card: #FFFFFF;
-  --border: #E8E0C8;
-  
-  --white: #FFFFFF;
-    
-}
-  
-  
-  *{
-    padding:0px;
-    margin:0px;
-    box-sizing: border-box;
-    color: var(--text);
-    text-align:center;
-  }
-  body{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  
-  }
-  .main-container{
-    width:90%;
-    max-width:800px;
-    background: var(--bg);
-    padding:15px;
-    box-shadow:0px 0px 16px var(--accent);
-  }
-  .main-card ,.projects-card,.projects-container div,
-  .about-card,.skills-card
-  {
-    background: var(--card);
-    border:4px solid var(--border);
-    border-radius:8px;
-  }
-  .main-card{
-    flex:3;
-    padding:15px;
-    
-  }
-  .img-card{
-    flex:2;
-  }
-  main{
-    display:flex;
-    grid-area:area1;
-    gap:10px;
-    margin-bottom:10px;
-    
-  }
-  .shop{
-    font-size:large;
-    font-weight:bolder;
-    
-  }
-  
-  button{
-    background-color: var(--accent);
-    border : 2px solid var(--borde);
-    padding: 4px 8px;
-    font-weight:bold;
-    border-radius:8px;
-  }
-  button:hover{
-    background-color: var(--accent-hover);
-  }
-  p{
-    margin-bottom:10px;
-  }
-  .main-pic{
-    width:100%;
-    max- width:240px;
-    height:240px;
-    object-fit:cover;
-    background: var(--card);
-    border:4px solid var(--border);
-    border-radius:8px;
-  }
-  
-  .projects-card{
-    padding:5px;
-    margin-bottom:10px;
-    grid-area:area3;
-  }
-  
-  .projects-container{
-    display:flex;
-    gap:5px;
-    margin-top:10px;
-    min-height:150px;
-    
-  }
-  .projects-container div{
-    flex:1;
-    padding:5px;
-  }
-  .about-skills-container{
-    display:flex;
-    gap:5px;
-    min-height:200px;
-    justify-content:center;
-    grid-area:area2;
-    
-  }
-  .about-skills-container button{
-    align-self:center;
-    margin-top:5px;
-  }
-  
-   .about-skills-container p{
-    text-align:start;
-  }
-  
-  .skills-card{
-    flex:2;
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    align-items:center;
-  }
-  ul{
-   list-style:none;
-   padding:0; 
-   margin:0;
-  }
-    .about-card{
-    flex:3;
-    flex-direction:column;
-    display:flex;
-    justify-content:center;
-      padding:10px;
-    
-  }
-  footer{
-    margin-top:15px;
-    display:flex;
-    justify-content:center;
-    gap:5px;
-    grid-area:footer;
-  }
-  
-  @media (max-width:800px){
-    
-    .main-container{
-      display:grid;
-      grid-template-column:1fr;
-      width:98%;
-      grid-template-areas:
-     "area1"
-     "area2"
-     "area3"
-      "footer"
-      ;
-    }
-    .about-skills-container{
-      display:grid;
-      grid-template-column:1fr;
-      gap:10px;
-      margin-bottom:10px;
-    }
-    .skills-card{
-      padding-top:10px;
-      padding-bottom:10px;
-    }
-    
-  }
-  
-  
-  
+ 
   </style>
-  
 </head>
 <body>
   
-  <div class="main-container"> 
- <main> 
-   <div class="main-card">
-  <h1>Kuvhanganani Nembilwi</h1>
-  <p>Aspring front end developer</p>
-  <p>|HTML|CSS|Javascript|</p>
-  <button>DownloadCV</button>
-  <button>ContactMe</button>
-     </div>
-   <div class="img-card">
-     <img class="main-pic" src="main-picture.jpg">
-   </div>  
- </main>
-  
-    <section class="projects-card">
-  <h2>Projects</h2>
-      <hr>
-      <div class="projects-container"> 
-        
-        
-  <div onclick="window.open('www.kuvha.com')" class="shop" style="
-    background-image:url('shop-pic.jpg');
-    background-position:center;
-    background-size:cover;
-    ">schoolshop</div>
-          
-  <div>MrSavingPlan.App</div>
-  <div> projects on github</div>
-   </div>
-     </section>
-  
-  <section class="about-skills-container">
-    <div class="about-card">
-    <h3>About me</h3>
-      <p>
- I'm a Frontend Developer focused on building fast, 
- clean, and responsive websites with HTML, CSS, and 
- JavaScript.
-</p>
-      <p>  
-I care about clean layouts, smooth user  experience,
-  and websites that look perfect on both mobile and 
-  desktop.
-</p>
-        <p> 
-Currently, I'm learning React and backend development,
-   and building real projects to turn what I learn 
-     into real skills.
-</p>
-        <p> 
-I'm looking for an internship or junior role 
-  where I can build real products, learn from a team,
-        and grow as a developer.
-
-
-      </p>
-    <p></p>
-    <button>DownloadCV</button>
+  <main class="main">
+    <header>
+      <div class="headdiv"> 
+      <h4 class="cartt">🛒</h4>
+      <p class="total-quantity">0</p>
+      <p class="total-price">R0</p>
+      </div>
+      
+     
+      
+      <button onclick="
+        if(cart.length>0){
+        slipSet();
+        }else{
+        alert('cart is empty and items!');
+        }
+        " class="checkOutBtn">Check Out</button>
+    </header>
+    
+      <h1 class="title">
+    SchoolStore
+  </h1>
+    
+    <div class="items-container">
+      
     </div>
+  </main>
+  
+  
+  
+  
+  
+  <script >
+  const products = [
+  { pic: `<img src="pen.png">`, name: "Pen", desc: "Blue Ballpoint Pen", price: 15 },
+  { pic: `<img src="pencil.png">`, name: "Pencil", desc: "HB Pencil - Single", price: 10 },
+  { pic:`<img src="rubber.png">`, name: "Rubber / Eraser", desc: "White Eraser - Soft", price: 12 },
+  { pic: `<img src="book.png">`, name: "Book", desc: "A4 Counter Book 192pg", price: 45 },
+  { pic:`<img src="sharpener.png">`, name: "Sharpener", desc: "Metal Sharpener - Single", price: 18 },
+  { pic: `<img src="crayons.png">`, name: "Crayons Pack", desc: "Pack of 12 Crayons", price: 55 },
+  { pic: `<img src="calculator.png">`, name: "Calculator", desc: "Scientific Calculator", price: 199 },
+  { pic: `<img src="ruler.png">`, name: "Ruler", desc: "30cm Clear Ruler", price: 25 },
+  { pic: `<img src="math.png">`, name: "Maths Instrument Set", desc: "Compass, Protractor, Set Squares", price: 85 },
+  { pic:`<img src="mark.png">`, name: "Markers", desc: "Pack of 6 Coloured Markers", price: 65 }
+];
+  
+  let cart = [];
+  
+  let items ="";
+  const itemsElm = document.querySelector(".items-container");
+  let totalPrice=0;
+  let quantity=0;
+  
+ function loadItems(){
+   products.forEach( function(item,index){
+     addItemProperties(item.pic,item.name,item.desc,item.price,index);
+   });
+ }
+  
+  function addItemProperties(e,n,d,p,index){
+    
+    items = items +  `
+    <div class="container">
+    
+        <div class="btn-item-container">
+    
+          <div class="item-img">${e}</div>
+    
+          <div class="item-info">
+            <p class="Name"> ${n}</p>
+            <p class="desc">${d}</p>
+            <p class="price">R ${p}</p>
+          </div>
+    
+        </div>
+    
+        <div class="btn-container">
+    
+          <button onclick="
+   addToCart(${index});
+    renderPQ(totalPrice,quantity);
+    ">Add To Cart +</button>
+    
+          <button onclick="
+    removeItem(${index});
+    renderPQ(totalPrice,quantity);
+    "> remove </button>
+    
+        </div>
+    
+      </div>
+    
+    `;
+    
+  }
+  
+  function renderItems(){
+    itemsElm.innerHTML = items;
+  }
+  function renderPQ(p,q){
+    document.querySelector(".total-price").innerText = "R "+p;
+    document.querySelector(".total-quantity").innerText =q;
+  }
+  
+  function removeItem(index){
+    for(let i = 0; i < cart.length; i++){
+      if(index===cart[i].code){
+        totalPrice-=cart[i].price;
+        quantity-=1;
+        cart.splice(i,1);
+        
+        alert("item removed");
+        break;
+      }
+    }
+      renderPQ(totalPrice,quantity);
+  }
+  
+  
+  function addToCart(index){
+    let p = products[index];
+    p.code = index;
+    cart.push(p);
+    
+    totalPrice=totalPrice+products[index].price;
+    quantity++;
+    
+   
+  }
+  
+  
+  
+  loadItems();
+  renderItems();
+  
+  
+  
+  </script>
+  
    
   
   
-    <div class="skills-card">  
-      <h3>Skills</h3>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>Javascript</li>
-      <li>Localstorage & JSON</li>
-      <li>DOM-manipulation</li>
-      <li>Responsive design</li>
-    </ul> 
-      
-    </div>
-    
-  </section>
   
-  <footer>
-    <p>@ 2026</p> 
-    <p>github</p>
-    <p>whatsapp</p>
-    
-  </footer>
-  
-    </div>
 </body>
 </html>
