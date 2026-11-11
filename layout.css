@@ -1,0 +1,111 @@
+body {
+  background: lightgrey;
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
+  padding-top: 80px;
+}
+
+header {
+  background: blue;
+  color: white;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+}
+
+.headdiv{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: blue;
+}
+
+.container, .slip-container {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 10px;
+}
+.title{
+  margin-top: 40px;
+}
+.btn-item-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.item-img {
+  font-size: 40px;
+}
+
+.Name, .price,.quantity{
+  font-weight: bold;
+}
+
+.desc {
+  color: grey;
+  font-size: 13px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-container button:first-child,
+.main > button {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.btn-container button:last-child {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.checkOutBtn {
+  background: yellow;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.total-quantity, .total-price {
+  background: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+}
+.itemstable{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.items-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+}
