@@ -5,7 +5,7 @@
   <meta content="text/html; charset=UTF-8">
    <meta name="viewport"
     content="width=device-width,initial-scale=1.0"> 
-  <script src="paymentjs.js"></script>
+  
   <link rel="stylesheet" href="layout.css"/>
   <title>SchoolStore</title>
   <style>
@@ -150,7 +150,67 @@
   loadItems();
   renderItems();
   
+  function  slipSet(){
+    let pageHTML = `
+   
+   <h1>SchoolStore</h1>
   
+    <h3>check out</h3>
+  
+    <div class="slip-container">
+      
+      <div class="itemstable">
+    ${itemStats()}
+    
+      </div>
+    </div>
+  
+  
+  
+    </div>
+  <button>process payment</button>
+    `;
+    
+    document.querySelector(".main").innerHTML= pageHTML;
+    
+}
+function itemStats(){
+  let done = [];
+  let html = "";
+
+  for(let i = 0; i < cart.length; i++){
+
+    if(done.includes(cart[i].name)){
+      continue; // already showed Pen, skip this Pen
+    }
+
+    done.push(cart[i].name);
+
+    let num = getAmount(cart[i].name);
+
+    html = html + `<p>${cart[i].name} </p>
+    <p>${num}</p>`;
+  }
+
+  return `
+    <p>total price</p><p class="price">R${totalPrice}</p>
+      <p>total items</p><p class="quantity">${quantity}</p>
+    
+    
+    <h3>name </h3><h3>quantity</h3> `+ html; 
+}
+
+
+
+function getAmount(name){
+  let a = 0;
+  for(let b = 0; b < cart.length; b++){
+    if(name === cart[b].name){
+      a++;
+    }
+  }
+  return a;
+}
   
   </script>
   
